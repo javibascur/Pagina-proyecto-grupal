@@ -57,6 +57,10 @@ section {
     max-height: 500px;
 }
 
+/* Ajuste específico para tamaños uniformes */
+.grafico-pequeno img {
+    max-height: 300px;
+}
 
 /* Contenedor tablas */
 #inscripcion, #rendicion, #postulacion, #matricula {
