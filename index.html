@@ -10,17 +10,14 @@
 </head>
 <body>
 
-    
     <!-- Título principal -->
     <header>
         <h1>Análisis sobre la Violencia Infantil en Chile
-
-            <!-- Espacio extra -->
             <br>
-            a partir de las encuestas de Polivictimización (2017 – 2023)</h1>
+            a partir de las encuestas de Polivictimización (2017 – 2023)
+        </h1>
     </header>
 
-    
     <!-- Menú de navegación -->
     <nav>
         <ul>
@@ -32,7 +29,6 @@
         </ul>
     </nav>
 
-    
     <!-- Introducción -->
     <section id="introduccion">
         <h2>Introducción</h2>
@@ -48,28 +44,29 @@
             infantil permite diseñar estrategias de prevención, protección y apoyo, contribuyendo a garantizar un entorno seguro y propicio para el desarrollo de todos los
             niños y adolescentes.
         </p>
-            <!-- Espacio extra -->
-            <br>
-            <!-- Objetivos -->
-            <h3>Objetivos</h3>
-            <p>El objetivo principal de este proyecto es analizar la incidencia, las características y la evolución de la violencia infantil en Chile, utilizando los datos
-                de las encuestas de polivictimización de 2017 y 2023. El propósito es identificar patrones y relaciones que permitan comprender cómo estas vulneraciones 
-                afectan el bienestar emocional de los estudiantes. 
-            </p> 
-            <p>Con el fin de responder a la pregunta ¿Cómo se manifiesta la magnitud de los distintos tipos de violencia hacia niños, niñas y adolescentes en Chile, de qué
-                manera impactan su bienestar emocional y cómo ha cambiado la prevalencia de estas vulneraciones a lo largo del tiempo?
-            </p>
-            <p>Con el propósito de proporcionar datos e información resultante de este estudio, buscamos que nuestra audiencia objetivo pueda implementar diversas estrategias 
-                orientadas a concientizar y promover el resguardo de niños, niñas y adolescentes. Esto se podría lograr mediante instancias en los colegios, así como en 
-                centros de salud, comunidades locales, organizaciones sociales entre otras, para visibilizar este tema, abordar las diversas formas de violencia que 
-                existen y presentar las alternativas de apoyo y acompañamiento disponibles para las víctimas de estos abusos.
-            </p>
+
+        <br>
+
+        <!-- Objetivos -->
+        <h3>Objetivos</h3>
+        <p>El objetivo principal de este proyecto es analizar la incidencia, las características y la evolución de la violencia infantil en Chile, utilizando los datos
+            de las encuestas de polivictimización de 2017 y 2023. El propósito es identificar patrones y relaciones que permitan comprender cómo estas vulneraciones 
+            afectan el bienestar emocional de los estudiantes. 
+        </p> 
+        <p>Con el fin de responder a la pregunta ¿Cómo se manifiesta la magnitud de los distintos tipos de violencia hacia niños, niñas y adolescentes en Chile, de qué
+            manera impactan su bienestar emocional y cómo ha cambiado la prevalencia de estas vulneraciones a lo largo del tiempo?
+        </p>
+        <p>Con el propósito de proporcionar datos e información resultante de este estudio, buscamos que nuestra audiencia objetivo pueda implementar diversas estrategias 
+            orientadas a concientizar y promover el resguardo de niños, niñas y adolescentes. Esto se podría lograr mediante instancias en los colegios, así como en 
+            centros de salud, comunidades locales, organizaciones sociales entre otras, para visibilizar este tema, abordar las diversas formas de violencia que 
+            existen y presentar las alternativas de apoyo y acompañamiento disponibles para las víctimas de estos abusos.
+        </p>
     </section>
 
-    
     <!-- Procesamiento -->
     <section id="procesamiento">
         <h2>Procesamiento de información</h2>
+
         <h3>Fuente de datos</h3>
         <p>El análisis se basa en dos conjuntos de datos de acceso público, disponibles en el portal del Centro de Estudios y Análisis del Delito (CEAD)
             <a href="https://cead.minsegpublica.gob.cl/" class="link-CEAD">base de datos del CEAD</a>. Se utilizan, por una parte, los registros de la Primera Encuesta Nacional
@@ -82,56 +79,54 @@
             región y comuna del establecimiento) y un conjunto de ítems vinculados al bienestar emocional, la autopercepción y la valoración personal. Estas dimensiones permiten
             realizar un análisis que considere tanto la ocurrencia de las vulneraciones como sus eventuales consecuencias psicológicas.
         </p>
-            <!-- Espacio extra -->
-            <br>
+
+        <br>
+
         <h3>Análisis exploratorio de datos</h3>
         <p>En primer lugar, se descargan los archivos originales desde el portal CEAD y se seleccionan las columnas pertinentes para los objetivos del estudio, privilegiando 
             aquellas que describen tipo de violencia, frecuencia, agresor, contexto del hecho y bienestar emocional. Posteriormente, se realiza una limpieza de los datos, que
             incluye la detección y manejo de valores nulos, la revisión de inconsistencias, la homogenización de categorías y la eliminación de registros duplicados.
         </p>
 
-         <ul>
-            <li><strong>Dataframe Encuestas</strong></li>
-                <section id="encuesta">
-                    <table class="tabla-estilo">
-                        <thead>
-                            <tr>
-                                <th>Campo</th>
-                                <th>Descripción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Region_colegio</td>
-                                <td>Region donde se encuentra el colegio del alumno encuestado.</td>
-                            </tr>
-                            <tr>
-                                <td>Comuna_colegio</td>
-                                <td>Comuna donde se encuentra el colegio del alumno encuestado.</td>
-                            </tr>
-                            <tr>
-                                <td>Curso_actual</td>
-                                <td>Curso del alumno encuestado.</td>
-                            </tr>
-                            <tr>
-                                <td>Sexo</td>
-                                <td>Sexo del alumno encuestado.</td>
-                            </tr>
-                            <tr>
-                                <td>Edad</td>
-                                <td>Edad del alumno encuestado.</td>
-                            </tr>
-                            <tr>
-                                <td>Preguntas</td>
-                                <td>Respuestas a cada pregunta de los encuestados.</td>
-                            
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <!-- Espacio extra -->
-                
-    
+        <h3>Dataframe Encuestas</h3>
+        <section id="encuesta">
+            <table class="tabla-estilo">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Region_colegio</td>
+                        <td>Región donde se encuentra el colegio del alumno encuestado.</td>
+                    </tr>
+                    <tr>
+                        <td>Comuna_colegio</td>
+                        <td>Comuna donde se encuentra el colegio del alumno encuestado.</td>
+                    </tr>
+                    <tr>
+                        <td>Curso_actual</td>
+                        <td>Curso del alumno encuestado.</td>
+                    </tr>
+                    <tr>
+                        <td>Sexo</td>
+                        <td>Sexo del alumno encuestado.</td>
+                    </tr>
+                    <tr>
+                        <td>Edad</td>
+                        <td>Edad del alumno encuestado.</td>
+                    </tr>
+                    <tr>
+                        <td>Preguntas</td>
+                        <td>Respuestas a cada pregunta de los encuestados.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
     <!-- Análisis de Datos -->
     <section id="analisis">
         <h2>Análisis de información y resultados</h2>
@@ -144,12 +139,11 @@
             un punto de partida para comprender el patrón general de victimización infantil observado en las encuestas.
         </p>
 
-        <!-- ********** AQUI VA EL GRAFICO ********** -->
         <div class="contenedor-imagen grafico-mediano">
-            <img src="Assets/imágenes/Plot1.png" alt="">
+            <img src="Assets/imágenes/Plot1.png" alt="Tipos de agresión más frecuentes">
         </div>
 
-         <p>Los datos muestran que la violencia física es la forma de maltrato más frecuente en ambos años estudiados. En 2017 se registraron más
+        <p>Los datos muestran que la violencia física es la forma de maltrato más frecuente en ambos años estudiados. En 2017 se registraron más
             de 12.000 niños afectados, mientras que en 2023 esta cifra disminuyó a cerca de 9.000. A pesar de las variaciones, este tipo de 
             violencia sigue siendo la de mayor prevalencia en comparación con la verbal y la sexual.
         </p>
@@ -160,15 +154,10 @@
             mostrando que los tipos de violencia no tienden a aumentar o disminuir de manera conjunta de forma significativa.
         </p>
 
-        
-        <p>
-        </p>
-
-        <!-- Espacio extra -->
         <br>
 
-         <!-- Correlación entre violencias -->
-        <h3>Correlación entre violencias </h3>
+        <!-- Correlación entre violencias -->
+        <h3>Correlación entre violencias</h3>
         <p>A continuación, se estudia la relación entre los distintos tipos de violencia sufrida, explorando hasta qué punto la exposición a una 
             forma de victimización se asocia con la presencia de otras. Mediante el uso de matrices de correlación y mapas de calor, se analiza 
             si los estudiantes que han experimentado violencia física, por ejemplo, presentan también una mayor probabilidad de haber sufrido 
@@ -176,35 +165,32 @@
             de las trayectorias de riesgo.
         </p>
 
-        <!-- ********** AQUI VA EL GRAFICO ********** -->
         <div class="contenedor-imagen grafico-mediano">
-            <img src="Assets/imágenes/Plot2.png" alt="">
+            <img src="Assets/imágenes/Plot2.png" alt="Correlación entre tipos de violencia">
         </div>
 
         <p>Al analizar el mapa de calor, lo primero que se observa es que ninguno de los tipos de violencia presenta correlaciones negativas. 
             Esto significa que la disminución de un tipo de violencia no implica el aumento de otro. Aun así, las correlaciones entre categorías 
             resultan relativamente bajas: ninguna supera 0.40, lo que indica relaciones débiles entre los distintos tipos de violencia.
-         </p>
+        </p>
 
         <p>Al comparar ambos años, se mantiene el mismo orden jerárquico en la fuerza de las correlaciones. Sin embargo, algunos valores cambiaron
             ligeramente con el tiempo. La única relación que permaneció exactamente igual fue la de violencia física y sexual (0.19), que sigue 
             siendo la correlación más débil. La relación más alta, entre violencia verbal y física, disminuyó apenas 0.01 entre 2017 y 2023. Por 
             su parte, la correlación entre violencia verbal y violencia sexual mostró el mayor cambio, aumentando de 0.22 a 0.25, aunque esta 
             variación sigue siendo pequeña.
-         </p>
+        </p>
         
-        <!-- Espacio extra -->
         <br>
         
         <!-- Variación según edad y tipo de violencia -->
         <h3>Variación según edad y tipo de violencia</h3>
-        <p> En los tres tipos de violencia registrados, se puede observar que la mayoría de los casos corresponden a niños de entre 13 y 16 años, 
+        <p>En los tres tipos de violencia registrados, se puede observar que la mayoría de los casos corresponden a niños de entre 13 y 16 años, 
             mientras que en los grupos de 13, 17, 18 y 19 años o más, las cantidades son mucho menores.
         </p>
 
-        <!-- ********** AQUI VA EL GRAFICO ********** -->
-        <div class="contenedor-imagen">
-            <img src="Assets/imágenes/Plot4.png" alt="">
+        <div class="contenedor-imagen grafico-mediano">
+            <img src="Assets/imágenes/Plot4.png" alt="Violencia según edad">
         </div>
         
         <p>El mapa de calor evidencia que los indicadores de violencia física, sexual y verbal presentan correlaciones negativas con el índice de 
@@ -214,10 +200,9 @@
             reforzando la noción de polivictimización. 
         </p>
 
-        <!-- Espacio extra -->
         <br>
         
-         <!-- Frecuencia de los abusos -->
+        <!-- Frecuencia de los abusos -->
         <h3>Frecuencia de los abusos</h3>
         <p>Además de la presencia o ausencia de victimización, se examina la frecuencia con la que se repiten los episodios de violencia. Para ello, 
             se utilizan las preguntas que indagan cuántas veces se han vivido determinadas situaciones en los últimos doce meses. El objetivo es 
@@ -225,12 +210,11 @@
             consecuencias más severas sobre la salud mental y el bienestar.
         </p>
         
-        <!-- ********** AQUI VA EL GRAFICO ********** -->
-        <div class="contenedor-imagen-mediano">
-            <img src="Assets/imágenes/Plot5.png" alt="">
+        <div class="contenedor-imagen grafico-mediano">
+            <img src="Assets/imágenes/Plot5.png" alt="Frecuencia de los abusos">
         </div>
         
-        <p> Los registros indican que, en el caso de la violencia física, la mayoría de los niños y adolescentes que la han sufrido reportan haberla
+        <p>Los registros indican que, en el caso de la violencia física, la mayoría de los niños y adolescentes que la han sufrido reportan haberla
             vivido alrededor de 2 a 3 veces (aproximadamente 11.200 casos), mientras que una minoría indica que la experimenta todos los días 
             (aproximadamente 900 casos). En cuanto a la violencia verbal, la mayoría también reporta haberla sufrido 2 a 3 veces (aproximadamente 
             7.200 casos), y un grupo más pequeño indica que la vive a diario (unos 1.000 casos). Respecto a la violencia sexual, la mayoría de los 
@@ -238,11 +222,8 @@
             registros de quienes la sufren todos los días (alrededor de 100 casos).
         </p>
 
-        
-        <!-- Espacio extra -->
         <br>
 
-        
         <!-- Violencia y bienestar emocional -->
         <h3>Violencia y bienestar emocional</h3>
         <p>Un componente central del estudio consiste en explorar la relación entre haber sufrido violencia y el bienestar emocional percibido 
@@ -252,21 +233,19 @@
             y un menor bienestar emocional.
         </p>
 
-        <!-- ********** AQUI VA EL GRAFICO ********** -->
-        <div class="contenedor-imagen grafico">
-            <img src="Assets/imágenes/Plot3.png" alt="">
+        <div class="contenedor-imagen grafico-mediano">
+            <img src="Assets/imágenes/Plot3.png" alt="Violencia y bienestar emocional">
         </div>
        
-         <p>El análisis indica que existe una relación clara entre haber sufrido violencia y presentar niveles más bajos de bienestar emocional.
-             Los estudiantes que reportan experiencias de violencia muestran una mayor concentración de puntajes ubicados en los niveles más 
-             críticos del índice de bienestar, mientras que quienes no han sufrido violencia tienden a presentar distribuciones más estrechas y 
-             centradas en valores más altos. Entre los distintos tipos de violencia, la violencia sexual es la que presenta la asociación negativa
-             más fuerte con el bienestar, evidenciando un impacto emocional más severo. Asimismo, se observa que la polivictimización amplifica 
-             la disminución del bienestar emocional, lo que sugiere que la exposición simultánea a múltiples formas de violencia podría tener
-             efectos acumulativos sobre la salud emocional de los estudiantes.
-         </p>
+        <p>El análisis indica que existe una relación clara entre haber sufrido violencia y presentar niveles más bajos de bienestar emocional.
+            Los estudiantes que reportan experiencias de violencia muestran una mayor concentración de puntajes ubicados en los niveles más 
+            críticos del índice de bienestar, mientras que quienes no han sufrido violencia tienden a presentar distribuciones más estrechas y 
+            centradas en valores más altos. Entre los distintos tipos de violencia, la violencia sexual es la que presenta la asociación negativa
+            más fuerte con el bienestar, evidenciando un impacto emocional más severo. Asimismo, se observa que la polivictimización amplifica 
+            la disminución del bienestar emocional, lo que sugiere que la exposición simultánea a múltiples formas de violencia podría tener
+            efectos acumulativos sobre la salud emocional de los estudiantes.
+        </p>
 
-        
         <!-- Matriz de confusión del modelo predictivo -->
         <h3>Matriz de confusión del modelo predictivo</h3>
         <p>Con el propósito de evaluar de forma más sistemática el impacto de la violencia sobre el bienestar emocional, se ajusta un modelo de 
@@ -276,9 +255,8 @@
             en qué medida el modelo captura los patrones observados en los datos.
         </p>
         
-        <!-- ********** AQUI VA EL GRAFICO ********** -->
-        <div class="contenedor-imagen grafico">
-            <img src="Assets/imágenes/Plot6.png" alt="">
+        <div class="contenedor-imagen grafico-mediano">
+            <img src="Assets/imágenes/Plot6.png" alt="Matriz de confusión del modelo">
         </div>
         
         <p>Los resultados del modelo indican que, aunque existe una asociación entre el bienestar emocional y la experiencia de violencia, esta 
@@ -292,11 +270,8 @@
             suficientemente robusto como para diferenciar adecuadamente entre estudiantes que han sufrido violencia y aquellos que no.
         </p>
 
-        
-        <!-- Espacio extra -->
         <br>
 
-        
         <!-- Comparación entre años -->
         <h3>Comparación entre años</h3>
         <p>El análisis comparativo entre las encuestas de 2017 y 2023 permite identificar cambios en la prevalencia y características de la violencia
@@ -305,9 +280,8 @@
             modificado su configuración en el período considerado, aportando elementos para evaluar la evolución del fenómeno. 
         </p>
 
-        <!-- ********** AQUI VA EL GRAFICO ********** -->
         <div class="contenedor-imagen grafico-mediano">
-            <img src="Assets/imágenes/Plot7.png" alt="">
+            <img src="Assets/imágenes/Plot7.png" alt="Comparación entre años">
         </div>
         
         <p>El análisis comparativo entre ambas encuestas revela un incremento general en la prevalencia de vulneraciones reportadas por los estudiantes
@@ -317,21 +291,23 @@
             como en los códigos individuales, lo que sugiere que el fenómeno no se restringe a un tipo específico de vulneración, sino que refleja un 
             aumento más amplio en la incidencia de experiencias de maltrato durante el periodo evaluado.
         </p>
+    </section>
 
-        
     <!-- Retroalimentación -->
     <section id="retroalimentación">
         <h2>Retroalimentación:
-        <!-- Espacio extra -->
-        <br>
-        ¿Qué podría salir mal?</h2>
+            <br>
+            ¿Qué podría salir mal?
+        </h2>
+
         <h3>La encuesta no representa a todos los niños, niñas y adolescentes de Chile</h3>
         <p>Si bien los datos entregan una muestra valiosa, la encuesta no incluye a toda la población infantil y adolescente del país. Esto significa que 
             los resultados reflejan solo a quienes participaron en el estudio y no necesariamente a la realidad completa de Chile. Por lo tanto, las 
             conclusiones no pueden generalizarse al 100% y deben interpretarse como una aproximación parcial.
         </p>
-            <!-- Espacio extra -->
-            <br>
+
+        <br>
+
         <h3>Concentración territorial y sesgo por comuna</h3>
         <p>La cantidad de niños, niñas y adolescentes encuestados difiere ampliamente entre comunas, lo que genera un desequilibrio en la base de datos. 
             Algunas zonas cuentan con un número mucho mayor de participantes que otras, lo que puede producir una apariencia engañosa de mayor ocurrencia
@@ -339,15 +315,15 @@
             que un mayor número de casos registrados podría deberse únicamente a que se encuestó a más personas y no a que exista realmente una frecuencia
             más alta de violencia. Esta desigualdad limita la representatividad y dificulta obtener conclusiones territoriales precisas.
         </p>
-            <!-- Espacio extra -->
-            <br>
+
+        <br>
+
         <h3>Distribución dispareja entre 2017 y 2023</h3>
         <p>Las encuestas de 2017 y 2023 no tienen la misma cobertura, tamaño muestral ni exacta metodología, lo cual dificulta una comparación completamente
             directa entre ambos años. Esta desigualdad puede influir en la percepción de aumentos o disminuciones de ciertos tipos de violencia, ya que parte
             de esas variaciones podrían deberse a diferencias metodológicas y no necesariamente a cambios reales en la población.
         </p>
     </section>
-    
 
     <!-- Repositorios -->
     <section id="repositorios">
@@ -361,11 +337,11 @@
         </p>
     </section>
 
-    
     <!-- Footer -->
-    <footer class = "estilo_footer">
-    &copy; 2025 Proyecto de Ciencia de Datos. Todos los derechos reservados.
+    <footer class="estilo_footer">
+        &copy; 2025 Proyecto de Ciencia de Datos. Todos los derechos reservados.
     </footer>
+
 </body>
 </html>
 
