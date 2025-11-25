@@ -1,1 +1,1 @@
-# P-gina-proyecto-grupal
+# Pagina-proyecto-grupal
