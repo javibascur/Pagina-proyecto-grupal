@@ -59,7 +59,7 @@ section {
 
 /* Ajuste específico para tamaños uniformes */
 .grafico-pequeno img {
-    max-height: 300px;
+    max-height: 400px;
 }
 
 /* Contenedor tablas */
