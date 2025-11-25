@@ -1,0 +1,222 @@
+/* Ajustes generales */
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 10px;
+  background-color: #E9E9E9;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* Contenedor principal */
+section {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #3498db;
+  text-align: left;
+}
+
+
+/* Contenedor de imágenes */
+.contenedor-imagen {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.contenedor-imagen:hover {
+  border-color: #3498db;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-imagen img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Ajuste específico para tamaños uniformes */
+.grafico-grande img {
+    max-height: 1000px;
+}
+
+/* Ajuste específico para tamaños uniformes */
+.grafico-mediano img {
+    max-height: 500px;
+}
+
+
+/* Contenedor tablas */
+#inscripcion, #rendicion, #postulacion, #matricula {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#inscripcion:hover, #rendicion:hover, #postulacion:hover, #matricula:hover {
+  border-color: #3498db;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de las tablas */
+#inscripcion h3, #rendicion h3, #postulacion h3, #matricula h3 {
+  text-align: center;
+  color: #6F46A7;
+  margin: 20px 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* Títulos */
+header {
+  background: #6F46A7;
+  color: white;
+  text-align: center;
+  padding: 50px 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: none;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+
+/* Navegación */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(52, 152, 219, 0.8);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #B1B8FF;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* Párrafos */
+p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+ul, ol {
+    text-align: justify;
+}
+
+li {
+    text-align: justify;
+}
+
+
+/* Estilo para el enlace */
+a.link-demre {
+    color: #3498db;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 2px;
+}
+
+a.link-demre:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+
+/* Estilo para las tablas */
+.tabla-estilo {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-estilo th {
+    background-color: #6F46A7;
+    color: white;
+    padding: 10px;
+}
+
+.tabla-estilo td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla-estilo tr:hover {
+    background-color: #B1B8FF;
+}
+
+
+/* Footer */
+.estilo_footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2c3e50;
+  color: white;
+  margin-top: 2rem;
+}

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Ciencia de Datos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <!-- Título principal -->
+    <header>
+        <h1>La Desigualdad Socioeconómica y su Impacto
+            <!-- Espacio extra -->
+            <br>
+            en el Acceso a la Educación Superior</h1>
+    </header>
+
+    
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#procesamiento">Procesamiento información</a></li>
+            <li><a href="#analisis">Análisis y resultados</a></li>
+            <li><a href="#retroalimentación">Retroalimentación</a></li>
+            <li><a href="#repositorios">Repositorios</a></li>
+        </ul>
+    </nav>
+
+    
+    <!-- Introducción -->
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>La educación es esencial para el desarrollo de una sociedad, ya que forma ciudadanos capaces de contribuir al progreso personal y colectivo. Sin embargo,
+            en Chile, este derecho enfrenta grandes desafíos debido a las desigualdades económicas y sociales que marcan diferencias significativas entre instituciones
+            públicas, subvencionadas y privadas. Estas desigualdades impactan la calidad de la enseñanza, los recursos disponibles y, en última instancia, las oportunidades
+            de los estudiantes para acceder a la educación superior.
+        </p>
+        <p>Este contexto nos motiva a visibilizar cómo las desigualdades socioeconómicas afectan el sistema educativo, limitando el acceso equitativo a oportunidades 
+            académicas y profesionales. Además, nos invita a reflexionar sobre las barreras que enfrentan los estudiantes de sectores más vulnerables, quienes, a pesar
+            de su esfuerzo, parten en desventaja debido a las condiciones de su entorno educativo. La falta de recursos, sumada a las inequidades en la distribución de 
+            oportunidades, refuerza un círculo de desigualdad que restringe su desarrollo y potencial. Impulsándonos la necesidad de comprender cómo estas diferencias
+            impactan profundamente en la vida de los jóvenes y en el futuro del país, subrayando la importancia de transformar el sistema educativo para hacerlo más 
+            inclusivo y equitativo.
+        </p>
+            <!-- Espacio extra -->
+            <br>
+            <!-- Objetivos -->
+            <h3>Objetivos</h3>
+            <p>El objetivo principal de este proyecto es analizar la relación entre el nivel socioeconómico, el tipo de institución educativa (pública, subvencionada o 
+                privada) y el desempeño académico de los estudiantes, explorando cómo la desigualdad social influye tanto el rendimiento académico como las oportunidades de
+                acceso a la educación superior en condiciones de equidad. 
+            </p> 
+            <p>Con el fin de responder a la pregunta, ¿Cuánto influye el nivel socioeconómico y el tipo de institución educativa en el acceso a la educación superior, 
+                y cómo se reflejan estas diferencias en el rendimiento académico de los estudiantes en la prueba de admisión?
+            </p>
+            <p>Con el propósito de evidenciar datos e información resultante de este estudio para que nuestra audiencia objetivo, como el gobierno, el Ministerio de Educación
+                y los establecimientos educativos, pueda implementar diversas estrategias orientadas a desarrollar un plan que promueva la equidad en el acceso a la educación,
+                mejorando el acceso a una educación de calidad.
+            </p>
+    </section>
+
+    
+    <!-- Procesamiento -->
+    <section id="procesamiento">
+        <h2>Procesamiento de información</h2>
+        <h3>Fuente de datos</h3>
+        <p>Todos los datos empleados en este trabajo son de acceso libre y fueron publicados por el Departamento de Evaluación, Medición y Registro Educacional (DEMRE). 
+            Estos incluyen información relacionada con los procesos de inscripción, rendición, postulación y matrícula de los años 2019 a 2023, 
+            disponibles en el portal oficial de <a href="https://demre.cl/portales/portal-bases-datos" class="link-demre">base de datos del DEMRE</a>.
+        </p>
+            <!-- Espacio extra -->
+            <br>
+        <h3>ETL</h3>
+        <p>Tras descomprimir todos los archivos, agrupamos los dataframes correspondientes a los años 2019-2023 según su sección y realizamos una limpieza para conservar 
+        únicamente la información relevante para nuestra investigación. Los datos finales quedaron organizados de la siguiente manera:
+        </p>
+
+         <ul>
+            <li><strong>Dataframe Inscripción:</strong> Incluye la información de los registros de los postulantes a la Prueba de Acceso a la Educación Superior.</li>
+            <!-- Tabla de Inscripción -->
+                <section id="inscripcion">
+                    <h3> INSCRIPCIÓN</h3>
+                    <table class="tabla-estilo">
+                        <thead>
+                            <tr>
+                                <th>Campo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ID_AUX</td>
+                                <td>Identificador único del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>ANYO_PROCESO</td>
+                                <td>Año correspondiente al proceso de admisión</td>
+                            </tr>
+                            <tr>
+                                <td>SEXO</td>
+                                <td>Sexo del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>GRUPO_DEPENDENCIA</td>
+                                <td>Tipo de financiamiento del establecimiento de egreso</td>
+                            </tr>
+                            <tr>
+                                <td>FECHA_NACIMIENTO</td>
+                                <td>Mes y año de nacimiento del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>ANYO_EGRESO</td>
+                                <td>Año en que el postulante egresó de la educación media</td>
+                            </tr>
+                            <tr>
+                                <td>CODIGO_REGION_D</td>
+                                <td>Código de la región de domicilio del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>CODIGO_COMUNA_D</td>
+                                <td>Código de la comuna de domicilio del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>INGRESO_PERCAPITA_GRUPO_FA</td>
+                                <td>Ingreso per cápita del grupo familiar del postulante</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Espacio extra -->
+                <br> 
+                <li><strong>Dataframe Rendición:</strong> Contiene los resultados de las pruebas y evaluaciones realizadas por los postulantes.</li>   
+                <!-- Tabla de Rendición -->
+                <section id="rendicion">
+                    <h3>RENDICIÓN</h3>
+                    <table class="tabla-estilo">
+                        <thead>
+                            <tr>
+                                <th>Campo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ID_AUX</td>
+                                <td>Identificador único del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>PROMEDIO_NOTAS</td>
+                                <td>Promedio de notas de la educación media del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>PTJE_NEM</td>
+                                <td>Puntaje estándar asignado al promedio de notas (NEM) del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>PTJE_RANKING</td>
+                                <td>Puntaje estándar asignado al ranking de notas del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>CLEC_REG_ACTUAL</td>
+                                <td>Puntaje en la prueba de Competencia Lectora actual del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>MATE1_REG_ACTUAL</td>
+                                <td>Puntaje en la prueba de Competencia Matemática 1 actual del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>MATE2_REG_ACTUAL</td>
+                                <td>Puntaje en la prueba de Competencia Matemática 2 actual del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>HCSOC_REG_ACTUAL</td>
+                                <td>Puntaje en la prueba de Historia actual del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>CIEN_REG_ACTUAL</td>
+                                <td>Puntaje en la prueba de Ciencias actual del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>GRUPO_DEPENDENCIA</td>
+                                <td>Tipo de financiamiento del establecimiento de egreso</td>
+                            </tr>
+                            <tr>
+                                <td>CODIGO_REGION</td>
+                                <td>Código de la región del establecimiento de egreso del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>COMUNA</td>
+                                <td>Nombre de las comunas de la Región Metropolitana</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Espacio extra -->
+                <br> 
+                <li><strong>Dataframe Postulación:</strong> Presenta datos sobre las preferencias de carreras seleccionadas y el estado de las postulaciones.</li> 
+                <!-- Tabla de Postulación -->
+                <section id="postulacion">
+                    <h3>POSTULACIÓN</h3>
+                    <table class="tabla-estilo">
+                        <thead>
+                            <tr>
+                                <th>Campo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ID_AUX</td>
+                                <td>Identificador único del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>SITUACION_POSTULANTE</td>
+                                <td>Código que indica la situación del postulante respecto a sus postulaciones en el programa BEA</td>
+                            </tr>
+                            <tr>
+                                <td>PTJE_PREFXX</td>
+                                <td>Puntaje ponderado del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>SIT_POSTULANTE_BEA</td>
+                                <td>Código que indica la situación del postulante respecto a sus postulaciones en el programa BEA</td>
+                            </tr>
+                            <tr>
+                                <td>PTJE_PREFXX_BEA</td>
+                                <td>Puntaje ponderado de estudiantes con postulación al programa BEA</td>
+                            </tr>
+                            <tr>
+                                <td>SIT_POSTULANTE_PACE</td>
+                                <td>Código que indica la situación del postulante respecto a sus postulaciones en el programa PACE</td>
+                            </tr>
+                            <tr>
+                                <td>PTJE_PREFXX_PACE</td>
+                                <td>Puntaje ponderado de estudiantes con postulación al programa PACE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- Espacio extra -->
+                <br> 
+                <li><strong>Dataframe Matrícula:</strong> Proporciona información sobre las matrículas efectivas en universidades, incluyendo las vías de ingreso y los puntajes ponderados.</li>
+                <!-- Tabla de Matrícula -->
+                <section id="matricula">
+                    <h3>MATRÍCULA</h3>
+                    <table class="tabla-estilo">
+                        <thead>
+                            <tr>
+                                <th>Campo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ID_AUX</td>
+                                <td>Identificador único del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>VIA</td>
+                                <td>Vía de admisión de la matrícula del postulante</td>
+                            </tr>
+                            <tr>
+                                <td>PTJE_PONDERADO</td>
+                                <td>Puntaje ponderado con el que el postulante se matriculó</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+        </section>
+    </ul>
+    
+    <!-- Análisis de Datos -->
+    <section id="analisis">
+        <h2>Análisis de información y resultados</h2>
+        
+        <!-- EDA -->
+        <!-- Pregunta1 -->
+        <h3>Ingreso per cápita de las comunas de la Región Metropolitana</h3>
+        <p>En Chile, los ingresos per cápita familiares son un indicador clave para evaluar el nivel de riqueza y bienestar económico a nivel 
+            territorial. Este indicador mide la distribución de los recursos económicos entre los miembros de un hogar, proporcionando una 
+            aproximación a las desigualdades  económicas y sociales presentes en distintas áreas del país.
+        </p>
+
+        <p>En este análisis, nos enfocaremos en el ingreso per cápita familiar de los postulantes a la prueba de acceso a la educación superior 
+            de la Región Metropolitana, calculando la mediana de los ingresos en cada comuna. Este enfoque ofrece una evaluación más robusta, ya
+            que la mediana minimiza el impacto de valores extremos y proporciona una perspectiva más representativa sobre la capacidad económica 
+            de las familias en cada territorio.
+        </p>
+
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen grafico-grande">
+            <img src="assets/imágenes/plot_6.png" alt="Mediana del Ingreso Per Cápita">
+        </div>
+
+         <p>Como resultado, podemos observar una notable diferencia en los ingresos per cápita familiares entre las comunas del país. 
+             En el extremo superior, destacan comunas como Vitacura y Lo Barnechea, donde los ingresos per cápita alcanzan cifras de $1.898.010 
+             o más, situándolas como las áreas con mayores niveles de bienestar económico.
+         </p>
+        
+        <p>Por otro lado, comunas como El Monte, La Pintana, Paine, La Granja, entre otras, presentan ingresos significativamente más bajos, 
+            con rangos que varían entre $270.000 y $356.000. Esta brecha, refleja profundas desigualdades económicas y sociales, 
+            evidenciando las disparidades que persisten en el territorio nacional.
+        </p>
+
+         <p>Por otro lado, comunas como El Monte, La Pintana, Paine, La Granja, entre otras, presentan ingresos significativamente más bajos, 
+             con rangos que varían entre $270.000 y $356.000. Esta brecha, refleja profundas desigualdades económicas y sociales, 
+             evidenciando las disparidades que persisten en el territorio nacional.
+         </p>
+
+        <!-- Espacio extra -->
+        <br>
+        
+        <!-- Pregunta1 -->
+        <h3>Tasa de Abandono en el Acceso a la Educación Superior por Tipo de Colegio</h3>
+        <p>En Chile, el acceso a la educación superior está dividido en varias etapas, como lo son la inscripción, rendición de pruebas, 
+            postulación y matrícula. Sin embargo, no todos los estudiantes logran completar cada una de estas etapas para acceder finalmente 
+            a la educación superior. Por esta razón, decidimos analizar la cantidad de abandonos en las etapas más significativas de este proceso.
+        </p>
+        <p>Estas etapas incluyen:</p>
+        <ul>
+            <li><strong>Rendición de las pruebas:</strong> En esta etapa se refleja la cantidad de personas que no se presentan a rendir 
+                los exámenes requeridos, lo que les impide avanzar a la siguiente fase, que es la postulación a las diferentes universidades 
+                disponibles en Chile.</li>
+            <li><strong>Matriculación en universidades:</strong> Corresponde al proceso en el que los estudiantes formalizan su ingreso a las 
+                universidades seleccionadas, de acuerdo con los resultados obtenidos en su postulación previa.</li>
+        </ul>
+        <p>Este análisis tiene como objetivo identificar los puntos críticos donde los estudiantes enfrentan mayores dificultades y comprender 
+            los factores que podrían contribuir al abandono en cada una de estas fases del proceso de acceso a la educación superior.</p>
+
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen grafico-mediano">
+            <img src="assets/imágenes/plot_4.png" alt="Tasa abondono por tipo de Colegio en diferentes etapas">
+        </div>
+
+        <p>De este gráfico podemos rescatar varios puntos, de los cuales rescatamos:</p>
+        <ul>
+            <li>La mayor tasa de abandono ocurre en la etapa de matrícula, específicamente entre las personas que estudiaron en colegios públicos
+                y subvencionados, con una pequeña diferencia. En comparación, la diferencia que existe entre estos colegios y los privados es bastante
+                notoria, ya que los colegios públicos y subvencionados duplican la cantidad de personas que han abandonado los colegios privados. 
+                Esto puede deberse a diversos factores, pero uno de los que podemos inferir es la calidad de la enseñanza, los recursos disponibles en
+                los establecimientos privados y la preparación previa para desarrollar estas pruebas que entregan estos establecimientos privados.</li>
+            <li>A pesar de que en la etapa de rendición observamos una tendencia similar, la mayor cantidad de personas abandona esta etapa en los 
+                colegios públicos o subvencionados, mientras que ningún estudiante proveniente de colegios privados lo hace. Se puede notar que el 
+                abandono en esta etapa es considerablemente menor en comparación con el proceso de matrícula. Esto podría deberse a que, una vez que 
+                los estudiantes han llegado a la etapa de rendición de pruebas, ya han invertido tiempo y esfuerzo en su preparación, lo que podría 
+                generar un mayor sentido de compromiso. También es posible que algunos estudiantes decidan rendir las pruebas simplemente para experimentar 
+                el proceso y entender cómo es enfrentar este tipo de evaluaciones sin esperar ningún tipo de resultado en específico.</li>
+        </ul>
+
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen grafico-mediano">
+            <img src="assets/imágenes/plot_5.png" alt="Dsitribución tasa de abandono por tipo de colegio">
+        </div>
+        
+        <p>Con base en los datos mostrados en los gráficos anteriores, podemos concluir que la mayoría de las personas que abandonan las distintas 
+            etapas del proceso de postulación a la educación superior provienen de colegios públicos y subvencionados. Este patrón refleja una tendencia 
+            en la que los estudiantes de estos establecimientos enfrentan mayores dificultades en su transición hacia la educación superior. Las razones
+            de este abandono pueden estar relacionadas con factores como la falta de recursos, apoyo educativo insuficiente o, incluso, la preparación 
+            académica desigual en comparación con los estudiantes de colegios privados. Estos factores podrían influir en la mayor tasa de abandono 
+            observada entre los estudiantes de colegios públicos y subvencionados en relación con los de colegios privados.
+        </p>
+        
+        <!-- Espacio extra -->
+        <br>
+        
+        <!-- Pregunta2 -->
+        <h3>Distribución de Puntajes por Comuna y Tipo de Colegio</h3>
+        <p>Como mencionamos anteriormente, para acceder a la educación superior en Chile es necesario superar varias etapas, entre las cuales destaca 
+            la rendición de las pruebas, una de las más importantes. En esta instancia, los estudiantes rinden cuatro exámenes que evalúan diferentes 
+            áreas: matemáticas, lenguaje, ciencias e historia. Dependiendo del puntaje obtenido en cada prueba, se determinará a qué universidades y 
+            carreras podrá postular el estudiante. Estas evaluaciones son rendidas por estudiantes de diferentes tipos de establecimientos educativos, 
+            como colegios municipales, subvencionados y privados, según la comuna de residencia de cada uno.
+        </p>
+        <p>Revisaremos cómo se distribuyen los puntajes promedio en estas pruebas en cada comuna, explorando si los resultados están vinculados al tipo
+            de colegio al que asisten los postulantes, con el objetivo de identificar patrones y posibles desigualdades en el rendimiento académico a 
+            nivel territorial.
+        </p>
+
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen">
+            <img src="assets/imágenes/plot_8.png" alt="Promedio PAES por Comuna y Tipo de Dependencia">
+        </div>
+        
+        <p>En base a lo observado, podemos identificar un patrón claro. En la mayoría de los colegios municipales y subvencionados, los puntajes 
+            promedio en las pruebas suelen variar entre 0 y poco más de 500 puntos. Por otro lado, en comunas donde existen colegios privados, los
+            promedios de puntajes en este tipo de colegios tienden a estar entre los 500 y 700 puntos. 
+        </p>
+        <p>Esto evidencia una diferencia significativa en los resultados de las pruebas según el tipo de colegio, lo que refleja desigualdades en el 
+            desempeño académico entre estos establecimientos, estrechamente relacionadas con la diferencia de ingresos entre las familias que acceden 
+            a cada tipo de colegio.
+        </p>
+
+        <!-- Espacio extra -->
+        <br>
+        
+         <!-- Pregunta3 -->
+        <h3>Distribución de Puntajes por Prueba y Comuna (2019 - 2023)</h3>
+        <p>Analizaremos la distribución de los puntajes obtenidos en cada prueba por los estudiantes de las distintas comunas, separando los 
+            resultados por año. Este análisis nos permitirá identificar patrones de rendimiento académico en áreas como matemáticas, lenguaje, 
+            ciencias e historia. Además, al desglosar los puntajes por comuna, podremos explorar variaciones entre ellas, calcular medidas 
+            centrales como la mediana y detectarvalores atípicos que se encuentran fuera del rango común, proporcionando una visión más detallada
+            de las diferencias y tendencias en el desempeño estudiantil.
+        </p>
+        
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen">
+            <img src="assets/imágenes/plot_10.png" alt="Distribución de Puntajes en la Prueba de Lenguaje por Comuna (Año 2023)">
+        </div>
+        <div class="contenedor-imagen">
+            <img src="assets/imágenes/plot_11.png" alt="Distribución de Puntajes en la Prueba de Matemáticas 1 y 2 por Comuna (Año 2023)" >
+        </div>
+        <div class="contenedor-imagen">
+            <img src="assets/imágenes/plot_13.png" alt="Distribución de Puntajes en la Prueba de Historia por Comuna (Año 2023)">
+        </div>
+        <div class="contenedor-imagen">
+            <img src="assets/imágenes/plot_14.png" alt="Distribución de Puntajes en la Prueba de Ciencias por Comuna (Año 2023)">
+        </div>
+        
+        
+        <p>Con base en los gráficos por prueba, podemos determinar que las comunas con mayores ingresos per cápita presentan índices de puntajes
+            más altosque el promedio de las comunas con ingresos más bajos, un patrón que se observa frecuentemente en todos los gráficos y 
+            pruebas analizadas. Los resultados muestran que la mediana de los puntajes en la mayoría de las comunas es bastante similar, excepto
+            en aquellas con mayor ingreso per cápita, que se destacan por estar significativamente por encima del promedio. Este comportamiento 
+            se repite en cada año analizado, desde 2019 hasta 2023, y en todos los tipos de pruebas.
+        </p>
+        <p>Aunque en comunas con ingresos más bajos existen puntajes individuales que superan la media e incluso se encuentran fuera del rango 
+            intercuartílico, estos casos son relativamente pocos en comparacióncon el resto de los puntajes obtenidos en esas comunas (Fuera 
+            del rango común). Por otro lado, en las comunas con mayores ingresos per cápita, no se observan puntajes fuera del rango estimado, 
+            ya que los resultados obtenidos tienden a estar concentrados dentro de los valores esperados según el rango intercuartílico. Esto 
+            podría reflejar una mayor homogeneidad en el rendimiento académico dentro de estas comunas, posiblemente influida por factores como 
+            acceso a mejores recursos educativos o mayor preparación previa para las pruebas.
+        </p>
+        
+        <!-- Espacio extra -->
+        <br>
+        
+        <!-- Pregunta4 -->
+        <h3>Distribución de Puntajes Máximos por Comuna</h3>
+        <p>Basándonos en la distribución de puntajes previamente analizada, hemos identificado que, en varias comunas, existen casos de puntajes
+            altos que, aunque no representan la mayoría, se destacan como valores fuera de lo esperado o fuera del rango normal. Esto nos lleva 
+            a explorar con mayor detalle los puntajes máximos obtenidos en cada año estudiado, así como las comunas de origen de las personas 
+            que lograron estos resultados. El objetivo es determinar si la cantidad de personas que alcanzan estos puntajes máximos es mayor en 
+            comunas con ingresos más bajos en comparación con las comunas de mayores ingresos. Esteanálisis nos permitirá explorar si, pese a las
+            limitaciones económicas, ciertas comunas con menos recursos logran generar una proporción mayor de estudiantes con un rendimiento 
+            excepcional.
+        </p>
+        
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen">
+            <img src="assets/imágenes/plot_12.png" alt="Cantidad de Personas con Puntaje Máximo por Comuna (2019 - 2023)">
+        </div>
+        
+        <p>Como resultado del análisis, observamos que, aunque existen puntajes máximos destacados en comunas de ingresos más bajos, las comunas 
+            con ingresos más altos son las que, en general, sobresalen de manera significativa en comparación con las demás. Este patrón se repite
+            en casi todos los años estudiados (2019-2023), con la notable excepción del año 2020. En ese año particular, las comunas que se destacan
+            no corresponden predominantemente a aquellas de mayores ingresos, sino más bien a comunas con ingresos medios o bajos.
+        </p>
+        <p>Esta excepción es especialmente interesante, ya que en 2020 se registra un número significativamente mayor de casos de personas con 
+            puntajes altos en estas comunas, igualando e incluso superando en algunos aspectos los resultados obtenidos en las comunas de mayores 
+            ingresos. Aunque las comunas con altos ingresos siguen estando presentes, el aumento de puntajes destacados en comunas con ingresos 
+            menores sugiereuna posible influencia de factores externos o cambios específicos en las condiciones educativas durante ese año. Esto
+            podría incluir modificaciones en las dinámicas de preparación académica, accesibilidad a recursos, o el impacto de eventos globales 
+            que afectaron de manera diferenciada a los estudiantes según su contexto económico y social.
+        </p>
+        
+        <!-- Espacio extra -->
+        <br>
+        
+        <!-- Pregunta5 -->
+        <h3>Análisis Comparativo del Proceso de Admisión entre una comuna de Menor y Mayor Ingreso</h3>
+        <p>En este apartado, se pretende analizar cómo varían los resultados en cada etapa del proceso de postulación a la educación superior entre
+            una comuna con bajos ingresos per cápita y una comuna con mayores ingresos.A través de este análisis, buscamos dejar en evidencia de qué
+            manera los factores socioeconómicos influyen en el acceso a la educación superior, particularmente en las etapas más importantes del 
+            proceso, como lamatrícula y la rendición de las pruebas. 
+        </p>
+        <p>Al contrastar los resultados obtenidos en las distintas etapas, se podrá evidenciar cómo las desigualdades socioeconómicas, como el 
+            acceso a recursos educativos, calidad educativa, y preparación académica, afectan el rendimiento de los estudiantes y, en última 
+            instancia, sus posibilidades de accedera la educación superior.
+        </p>
+        <p>Este análisis tiene como objetivo resaltar las diferencias existentes y generar una comprensión más clara de cómo las variaciones en 
+            el contexto económicopueden influir en el desempeño académico y las oportunidades educativas, lo que subraya la necesidad de políticas
+            públicas que promuevan un acceso más equitativo a la educación superior.
+        </p>
+
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen grafico-mediano">
+            <img src="assets/imágenes/plot_17.png" alt="Cantidad de Personas por Año y Comuna">
+        </div>
+        
+        <p>Las comunas seleccionadas para llevar a cabo esta comparación son La Pintana, representando a aquellas con ingresos más bajos, y Lo 
+            Barnechea, que se destaca por tener ingresos más altos. La elección de estas dos comunas se fundamenta en que ambas presentan una 
+            cantidad de estudiantes que rindieron las pruebas similar durante los años 2019 y 2022, lo que nos permite mantener un equilibrio 
+            y una base comparativa justa para analizar los resultados de ambos años.
+        </p>
+
+         <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen">
+            <img src="assets/imágenes/plot_16.png" alt="Distribución Dependencias">
+        </div>
+        
+        <p>En primer lugar, es importante destacar los tipos de colegios presentes en estas comunas. En La Pintana, la mayoría de los establecimientos
+            educativos son públicos o subvencionados, lo que refleja una limitada disponibilidad de recursos y una infraestructura educativa menos 
+            favorecida. Por otro lado, en Lo Barnechea, predominan los colegios privados, los cuales, en su mayoría, cuentan con mayores recursos, 
+            tanto en infraestructura como en personal docente altamente capacitado.
+        </p>
+
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen">
+            <img src="assets/imágenes/plot_15.png" alt="Distribución de Puntajes">
+        </div>
+        
+        <p>En la etapa de rendición de las pruebas, podemos observar diferencias significativas en la distribución de los puntajes entre las dos 
+            comunas. En La Pintana, los puntajes en los cuatro tipos de prueba se concentran principalmente en el rango de 400 a 500 puntos, tanto 
+            en 2019 como en 2022. Aunque se registran algunos puntajes más altos, estos son aislados y representan una pequeña fracción del total 
+            de los estudiantes. Esto sugiere que, en general, los estudiantes de esta comuna enfrentan mayores desafíos en el rendimiento de las 
+            pruebas, lo cual puede estar relacionado con una menor preparación académica, una infraestructura educativa menos adecuada y una falta
+            de recursos que limita las oportunidades de desarrollo académico.
+        </p>
+        <p>Por otro lado, en Lo Barnechea, los resultados son notablemente diferentes. La mayoría de los puntajes se agrupan entre 500 y casi 800 
+            puntos, con una menor dispersión, lo que indica que el rendimiento de los estudiantes es más homogéneo y tiende a ser superior. Además, 
+            un mayor número de estudiantes alcanzan puntajes elevados, lo que refleja una mejor preparación con diversos recursos disponibles para 
+            los estudiantes. 
+        </p>
+        <p>Estas diferencias en la distribución de los puntajes no solo reflejan el contexto socioeconómico de cada comuna, sino que también subrayan
+            las desigualdades en las oportunidades educativas y el acceso a recursos que pueden marcar la diferencia en el rendimiento académico de 
+            los estudiantes. Esto se evidencia aún más cuando comparamos las dos comunas a lo largo de los dos años analizados, mostrando una tendencia
+            consistente en La Pintana hacia puntajes más bajos y en Lo Barnechea hacia puntajes más altos.
+        </p>
+
+        <!-- ********** AQUI VA EL GRAFICO ********** -->
+        <div class="contenedor-imagen grafico-mediano">
+            <img src="assets/imágenes/plot_18.png">
+        </div>
+        
+        <p>En la etapa de postulaciones a universidades, se observa una diferencia notable entre La Pintana y Lo Barnechea, particularmente en 
+            cuanto a la cantidad de postulantes que lograron una postulación efectiva o quedaron en lista de espera. Lo Barnechea muestra una 
+            cifra considerablemente mayor, con el doble de personas que alcanzan estas categorías en comparación con La Pintana. Este patrón 
+            refleja la desigualdad  en las oportunidadesde acceso a la educación superior entre las dos comunas, lo que es un claro indicio de 
+            las desigualdades socioeconómicas presentes.
+        </p>
+        <p>En La Pintana, el proceso de postulación se ve marcado por una menor tasa de éxito, ya que solo un pequeño porcentaje de los postulantes 
+            logró asegurar un cupo en las universidades, y muchos de los estudiantes quedaron fuera del sistema o en lista de espera. Este fenómeno 
+            puede explicarse por varios factores, como la menor preparación académica de los estudiantes debido a limitaciones en recursos educativos 
+            y un acceso más restringido a información y asesoría sobre el proceso de admisión.
+        </p>
+        <p>En contraste, en Lo Barnechea, la gran mayoría de los postulantes logra obtener un lugar en las universidades, con solo un pequeño 
+            porcentaje quedando fuera del sistema o en lista de espera. Esta diferencia es un reflejo de las ventajas que los estudiantes de Lo 
+            Barnechea tienen, como un mejor acceso a recursos educativos, preparación académica de alta calidad, y la posibilidad de contar con
+            un entorno que favorece el éxito en los exámenes de admisión.
+        </p>
+        <p>Se puede concluir que las comunas con mayores ingresos, como Lo Barnechea, ofrecen mejores oportunidades a sus estudiantes, mientras que 
+            en La Pintana, la falta de recursos y las barreras socioeconómicas limitan las opciones de acceso a la educación superior, incluso para 
+            aquellos estudiantes que logran superar las primeras etapas del proceso de postulación.
+        </p>
+    </section>
+
+    
+    <!-- Retroalimentación -->
+    <section id="retroalimentación">
+        <h2>Retroalimentación:
+        <!-- Espacio extra -->
+        <br>
+        Retrospectiva, problemáticas, y posibles extensiones</h2>
+        <h3>Comparación entre pruebas</h3>
+        <p>El sistema de admisión a la educación superior en Chile ha pasado por varios cambios recientes. En 2020, la PSU (Prueba de Selección
+            Universitaria)fue reemplazada por la PDT (Prueba de Transición), con un enfoque en medir competencias fundamentales y reducir contenidos
+            específicos. Luego, en 2023, el Ministerio de Educación introdujo la PAES (Prueba de Acceso a la Educación Superior), que incluyó la 
+            división de la prueba de Matemáticas en dos versiones: Matemática 1 (M1), orientada a habilidades generales, y Matemática 2 (M2), para 
+            carreras que requieren un nivel avanzado en esta área. Además, se ajustó la escala de puntajes, cambiando de un rango de 150 a 850 puntos 
+            en la PDT a uno de 100 a 1.000 puntos en la PAES, buscando mostrar de manera más precisa las diferencias en los niveles de desempeño de 
+            cada estudiante.
+        </p>
+            <!-- Espacio extra -->
+            <br>
+        <h3>Diferencia en la densidad de las comunas</h3>
+        <p>A raíz de nuestro análisis, hemos identificado que la cantidad de personas por comuna que rindieron la prueba de admisión a la educación
+            superior varía en gran medida en algunos casos. Esto implica que las comparaciones entre comunas no son completamente proporcionales, 
+            ya que las diferencias en la cantidad de postulantes pueden influir en los resultados generales. Este aspecto debe ser considerado al 
+            interpretar los datos, ya que puede generar sesgos o conclusiones que no reflejan adecuadamente las realidades educativas de cada comuna.
+        </p>
+            <!-- Espacio extra -->
+            <br>
+        <h3>Justificación ética</h3>
+        <p>Al revisar nuestros datos, concluimos que el único problema ético que podría surgir está relacionado con el uso de información personal
+            de miles de estudiantes. Sin embargo, los datos sensibles están protegidos, ya que el identificador utilizado, ID_AUX, es únicamente 
+            un número asociado a los resultados y no está vinculado directamente a información personal identificable, como podría ocurrir con el RUT. 
+            Esto garantiza un nivel adecuado de anonimato y minimiza los riesgos relacionados con la privacidad de los individuos involucrados en el
+            análisis.
+        </p>
+            <!-- Espacio extra -->
+            <br>
+        <h3>Posibles extensiones</h3>
+        <p>Debido a la gran cantidad de regiones y comunas en Chile, decidimos enfocar nuestro análisis en la Región Metropolitana y sus respectivas
+            comunas, ya que esta región es la capital del país y tiene la mayor concentración de población. Esta decisión se tomó con la idea de 
+            simplificar el alcance del proyecto para centrarnos mejor en los resultados de nuestros análisis. Sin embargo, creemos que extender el
+            estudio a otras regiones del país ofrecería una visión más amplia, permitiendo comparar zonas más vulnerables y entender mejor las 
+            diferencias entre ellas, tanto a nivel económico como a nivel educativo.
+        </p>
+        <p>A mayor escala, se podría llevar a cabo un análisis comparativo entre regiones, lo que permitiría identificar tendencias y diferencias 
+            significativas en aspectos como educación, acceso a servicios y calidad de vida. También sería posible realizar comparaciones a nivel 
+            de comunas, ampliando el análisis a todo el territorio nacional y proporcionando datos útiles para políticas públicas orientadas a la 
+            mejora de las zonas más desfavorecidas.
+        </p>
+    </section>
+    
+
+    <!-- Repositorios -->
+    <section id="repositorios">
+        <h2>Repositorios</h2>
+        <p>Para este proyecto se desarrollaron dos repositorios en GitHub:</p>
+        <p>El primero contiene una propuesta y el análisis de los datos trabajados: 
+            <a href="https://github.com/javibascur/Proyecto-Cs-Datos.git" class="link-demre">Propuesta y análisis de datos</a>.
+        </p>
+        <p>El segundo está dedicado a la creación de la página web del proyecto mediante GitHub Pages: 
+            <a href="https://github.com/Amath3o/Proyecto_Cs_Datos_Pagina.git" class="link-demre">Página web del proyecto</a>.
+        </p>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class = "estilo_footer">
+    &copy; 2024 Proyecto de Ciencia de Datos. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
+
