@@ -3,7 +3,7 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 10px;
-  background-color: #E9E9E9;
+  background-color: #ececec;
   color: #333;
   line-height: 1.6;
 }
@@ -16,11 +16,17 @@ section {
   padding: 20px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-left: 6px solid #3498db;
+  box-shadow: 0 4px 10px rgb(155, 155, 155);
+  border-left: 6px solid #d1cdcc;
   text-align: left;
 }
 
+.titulo-encuesta {
+    text-align: center;     
+    margin-bottom: 10px;   
+    font-size: 24px;         
+    font-weight: bold;       
+}
 
 /* Contenedor de imágenes */
 .contenedor-imagen {
@@ -28,14 +34,14 @@ section {
   padding: 20px;
   margin: 20px auto;
   border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(127, 125, 125, 0.2);
   transition: all 0.3s ease-in-out;
 }
 
 .contenedor-imagen:hover {
-  border-color: #3498db;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-color: #ccd1cd;
+  box-shadow: 0 6px 12px rgba(127, 125, 125, 0.554);
 }
 
 .contenedor-imagen img {
@@ -69,29 +75,41 @@ section {
   margin-bottom: 20px;
   border-radius: 8px;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(127, 125, 125, 0.2);
   transition: all 0.3s ease-in-out;
 }
 
 #inscripcion:hover, #rendicion:hover, #postulacion:hover, #matricula:hover {
-  border-color: #3498db;
+  border-color: #cccdd1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Títulos de las tablas */
 #inscripcion h3, #rendicion h3, #postulacion h3, #matricula h3 {
   text-align: center;
-  color: #6F46A7;
+  color: #8ea64d;
   margin: 20px 0;
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+.link-cead {
+    color: #8ea64d;      
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-cead:hover {
+    color: #d6d6d6;      
+    text-decoration: none;
+    transition: 0.3s ease-in-out; 
+}
+
 
 /* Títulos */
 header {
-  background: #6F46A7;
+  background: #8ea64d;
   color: white;
   text-align: center;
   padding: 50px 10px;
@@ -108,15 +126,15 @@ header h1 {
 
 h2 {
     font-size: 2rem;
-    color: #34495e;
-    border-bottom: 2px solid #3498db;
+    color: #333333;
+    border-bottom: 3px solid #8ea64d;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 h3 {
     font-size: 1.5rem;
-    color: #34495e;
+    color: #333333;
     margin-bottom: 5px;
 }
 
@@ -126,7 +144,7 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: rgba(52, 152, 219, 0.8);
+    background-color: #d1d1cc;
     padding: 10px 0;
     z-index: 1000;
 }
@@ -148,12 +166,12 @@ nav ul li a {
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 8px 10px;
     transition: all 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #B1B8FF;
+    background-color: #afacac;
     color: white;
     border-radius: 5px;
 }
@@ -176,16 +194,16 @@ li {
 
 /* Estilo para el enlace */
 a.link-demre {
-    color: #3498db;
+    color: #8ea64d;
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #8ea64d;
     padding-bottom: 2px;
 }
 
 a.link-demre:hover {
-    color: #2980b9;
-    border-bottom-color: #2980b9;
+    color: #d1d1cc;
+    border-bottom-color: #d1d1cc;
 }
 
 
@@ -200,19 +218,19 @@ a.link-demre:hover {
 }
 
 .tabla-estilo th {
-    background-color: #6F46A7;
+    background-color: #8ea64d;
     color: white;
     padding: 10px;
 }
 
 .tabla-estilo td {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid #d6d6d6;
     text-align: left;
 }
 
 .tabla-estilo tr:hover {
-    background-color: #B1B8FF;
+    background-color: #ececec;
 }
 
 
